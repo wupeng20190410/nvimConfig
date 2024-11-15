@@ -4,7 +4,9 @@ set.number = true
 set.relativenumber = true
 set.clipboard = "unnamedplus"
 set.mouse = "a"
-
+vim.cmd([[
+  autocmd BufRead,BufNewFile *.s set filetype=asm
+]])
 --Tab
 set.tabstop = 4 -- number of visual spaces per TAB
 set.softtabstop = 4 -- number of spacesin tab when editing
@@ -130,4 +132,12 @@ vim.keymap.set(
 	{ desc = "Close ohthers windows", noremap = true, silent = true }
 )
 
---Fold code
+--align
+
+-- 定义在正常模式和可视模式下使用 `ga` 启动对齐
+vim.api.nvim_set_keymap("n", "ga", "<Plug>(EasyAlign)", {})
+vim.api.nvim_set_keymap("x", "ga", "<Plug>(EasyAlign)", {})
+
+--formatter
+
+vim.keymap.set("n","<leader>f",":Format<CR>")
