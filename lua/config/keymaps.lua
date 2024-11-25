@@ -1,12 +1,12 @@
 ---Basic comfiguration
 local set = vim.opt
 set.number = true
-set.relativenumber = true
+--set.relativenumber = true
 set.clipboard = "unnamedplus"
 set.mouse = "a"
-vim.cmd([[
-  autocmd BufRead,BufNewFile *.s set filetype=asm
-]])
+--vim.cmd([[
+--  autocmd BufRead,BufNewFile *.s set filetype=asm
+--]])
 --Tab
 set.tabstop = 4 -- number of visual spaces per TAB
 set.softtabstop = 4 -- number of spacesin tab when editing
@@ -131,6 +131,7 @@ vim.keymap.set(
 	":BufferLineCloseOther<CR>",
 	{ desc = "Close ohthers windows", noremap = true, silent = true }
 )
+
 
 --align
 
