@@ -122,7 +122,7 @@ vim.keymap.set("n", "L", ":BufferLineCycleNext<CR>", { desc = "Right windows", n
 vim.keymap.set(
 	"n",
 	"<space>bd",
-	":BufferLineClose<CR>",
+	":bd<CR>",
 	{ desc = "Close current windows", noremap = true, silent = true }
 )
 vim.keymap.set(
