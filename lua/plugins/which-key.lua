@@ -29,7 +29,13 @@ return{
           vim.cmd('call codeium#Complete()')
         end, 
         desc = "Trigger Codeium Suggestion" 
+      },
+      {
+          "<leader>ww",
+          "<cmd>let @+ = system('pwd')<CR>",
+          desc = "cp pwd"
       }
+
     })
   end
 ,
