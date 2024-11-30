@@ -142,3 +142,8 @@ vim.api.nvim_set_keymap("x", "ga", "<Plug>(EasyAlign)", {})
 --formatter
 
 vim.keymap.set("n","<leader>f",":Format<CR>")
+
+--projects
+--projects
+
+vim.keymap.set("n","<leader>p",":Telescope projects<CR>")
