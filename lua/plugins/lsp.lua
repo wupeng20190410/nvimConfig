@@ -32,6 +32,7 @@ return {
                 "lua_ls",
                 "asm_lsp",
                 "clangd",
+                "pylsp"
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -204,8 +205,8 @@ return {
                     filter = function(client)
                 print("LSP client attached: " .. client.name)
                         -- NOTE: If an LSP contains a formatter, we don't need to use null-ls at all.
-                        return  client.name == "lua_ls" or client.name == "asm_lsp" or
-                            client.name == "clangd"
+                        return   client.name == "null-ls" or client.name == "lua_ls" or client.name == "asm_lsp" or
+                            client.name == "clangd" or client.name == "pylsp"
                     end,
                 })
             end, { desc = "Format code", noremap = true, silent = true, buffer = bufnr })
