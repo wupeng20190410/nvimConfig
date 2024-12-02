@@ -4,9 +4,16 @@ set.number = true
 --set.relativenumber = true
 set.clipboard = "unnamedplus"
 set.mouse = "a"
---vim.cmd([[
---  autocmd BufRead,BufNewFile *.s set filetype=asm
---]])
+
+--nvim-tree setting
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- optionally enable 24-bit colour
+set.termguicolors = true
+
+
+
 --Tab
 set.tabstop = 4 -- number of visual spaces per TAB
 set.softtabstop = 4 -- number of spacesin tab when editing
@@ -31,7 +38,7 @@ KeyMap("n", "<C-j>", "<C-w>j", { noremap = true, silent = true })
 KeyMap("n", "<C-h>", "<C-w>h", { noremap = true, silent = true })
 
 -- Fast enter file on explore
-vim.api.nvim_create_augroup("netrw_mapping", { clear = true })
+--vim.api.nvim_create_augroup("netrw_mapping", { clear = true })
 
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "netrw",
@@ -144,6 +151,7 @@ vim.api.nvim_set_keymap("x", "ga", "<Plug>(EasyAlign)", {})
 vim.keymap.set("n","<leader>f",":Format<CR>")
 
 --projects
---projects
 
 vim.keymap.set("n","<leader>p",":Telescope projects<CR>")
+
+

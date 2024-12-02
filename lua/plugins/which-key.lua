@@ -34,6 +34,11 @@ return{
           "<leader>ww",
           "<cmd>let @+ = system('pwd')<CR>",
           desc = "cp pwd"
+      },
+      {
+        "<leader>e",
+        "<cmd>NvimTreeToggle<CR>",
+        desc = "Open Explore"
       }
 
     })
