@@ -105,7 +105,7 @@ vim.keymap.set(
 local ts_fold_group = vim.api.nvim_create_augroup("TS_FOLD_WORKAROUND", {})
 vim.api.nvim_create_autocmd({ "BufEnter", "BufAdd", "BufNew", "BufNewFile", "BufWinEnter" }, {
 	group = ts_fold_group,
-	pattern = { "*.c", "*.lua" },
+	pattern = { "*.c", "*.lua" , "*.py" },
 	callback = function()
 		vim.opt.foldmethod = "expr"
 		vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
